@@ -23,7 +23,7 @@ end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 repeat wait() until game:IsLoaded()
 local Window = Fluent:CreateWindow({
-    Title = "VTD Roblox Tổng Hợp",
+    Title = "VTD Roblox Tổng Hợp true 2.34.7",
     SubTitle = "Blox Fruit",
     TabWidth = 157,
     Size = UDim2.fromOffset(450, 300),
@@ -48,7 +48,7 @@ local Tabs = {
     Title = "Youtuber",
     Description = "VTD Roblox",
     Callback = function()
-        setclipboard("http://www.roblox.com/asset/?id=124682499503385")
+        setclipboard("https://youtube.com/@vtd.roblox1?si=A5NM7LD-DIOE3a_0")
     end
 })
 
@@ -56,7 +56,7 @@ local Tabs = {
     Title = "Youtuber",
     Description = "VTD Roblox",
     Callback = function()
-        setclipboard("http://www.roblox.com/asset/?id=124682499503385")
+        setclipboard("https://youtube.com/@vtd.roblox1?si=A5NM7LD-DIOE3a_0")
     end
 })
     
@@ -98,9 +98,38 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs
   end
 })
 Tabs.Main1:AddButton({
+    Title="script hiru hub",
+    Description="",
+    Callback=function()
+	  repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaStupid/ExecuteGames/main/QuestGames.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
     Title="banana hub free",
     Description="",
     Callback=function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/kimprobloxdz/Banana-Free/refs/heads/main/Protected_5609200582002947.lua.txt"))()
+  end
+})
+Tabs.Main2:AddButton({
+    Title="nat hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://get.nathub.xyz/loader"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="cutay hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet('https://github.com/diemquy/CutTayHub/blob/main/Cuttayhubreal.lua'))()
+  end
+})
+Tabs.Main2:AddButton({
+    Title="speed hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() 
   end
 })
