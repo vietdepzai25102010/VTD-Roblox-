@@ -23,7 +23,7 @@ end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 repeat wait() until game:IsLoaded()
 local Window = Fluent:CreateWindow({
-    Title = "VTD Roblox Tổng Hợp true 2.34.7",
+    Title = "VTD Roblox Tổng Hợp true 2.35.7",
     SubTitle = "Blox Fruit",
     TabWidth = 157,
     Size = UDim2.fromOffset(450, 300),
@@ -35,6 +35,139 @@ local Tabs = {
         Main0=Window:AddTab({ Title="Thông Tin" }),
         Main1=Window:AddTab({ Title="Script Blox fruit" }),
         Main2=Window:AddTab({ Title="Grow A Garden" }),
+}
+    Tabs.Main0:AddButton({
+    Title = "Discord",
+    Description = "VTD Roblox Community",
+    Callback = function()
+        setclipboard("https://discord.gg/qEkEHgkQ")
+    end
+})
+
+    Tabs.Main0:AddButton({
+    Title = "Youtuber",
+    Description = "VTD Roblox",
+    Callback = function()
+        setclipboard("https://youtube.com/@vtd.roblox1?si=A5NM7LD-DIOE3a_0")
+    end
+})
+
+    Tabs.Main0:AddButton({
+    Title = "Youtuber",
+    Description = "VTD Roblox",
+    Callback = function()
+        setclipboard("https://youtube.com/@vtd.roblox1?si=A5NM7LD-DIOE3a_0")
+    end
+})
+    
+    Tabs.Main1:AddButton({
+    Title="Redz Hub",
+    Description="",
+    Callback=function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="w-azure Hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/85e904ae1ff30824c1aa007fc7324f8f.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="fix lag",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="xero",
+    Description="",
+    Callback=function()
+	  getgenv().Team = "Marines"
+getgenv().Hide_Menu = false
+getgenv().Auto_Execute = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="script hiru hub",
+    Description="",
+    Callback=function()
+	  repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaStupid/ExecuteGames/main/QuestGames.lua"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="banana hub free",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/kimprobloxdz/Banana-Free/refs/heads/main/Protected_5609200582002947.lua.txt"))()
+  end
+})
+Tabs.Main2:AddButton({
+    Title="nat hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://get.nathub.xyz/loader"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="cutay hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet('https://github.com/diemquy/CutTayHub/blob/main/Cuttayhubreal.lua'))()
+  end
+})
+Tabs.Main2:AddButton({
+    Title="speed hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() 
+  end
+})
+Tabs.Main2:AddButton({
+    Title="script ảo",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://pastefy.app/XgLKMqtd/raw"))()
+  end
+})
+Tabs.Main2:AddButton({
+    Title="limid hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/PanjuII/LimitHub/refs/heads/main/LimitHub_Luarmor_E.lua"))()
+  end
+})
+Tabs.Main2:AddButton({
+    Title="script no lag",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/LoaderV1.lua"))()
+  end
+})
+Tabs.Main2:AddButton({
+    Title="script no lag",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/GrowaGarden"))()
+  end
+})
+Tabs.Main1:AddButton({
+    Title="speed hub",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() 
+  end
+})        Main2=Window:AddTab({ Title="Grow A Garden" }),
 }
     Tabs.Main0:AddButton({
     Title = "Discord",
