@@ -1,3 +1,78 @@
+--// Hiệu ứng chữ tương lai + pháo hoa
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local player = Players.LocalPlayer
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "YutaIntro"
+gui.IgnoreGuiInset = true
+gui.ResetOnSpawn = false
+gui.Parent = player:WaitForChild("PlayerGui")
+
+local msg = Instance.new("TextLabel")
+msg.Parent = gui
+msg.AnchorPoint = Vector2.new(0.5, 0.5)
+msg.Position = UDim2.new(0.5, 0, 0.5, 0)
+msg.Size = UDim2.new(0, 600, 0, 120)
+msg.BackgroundTransparency = 1
+msg.Text = "⚡ BY YUTA - VTD Roblox ⚡"
+msg.TextColor3 = Color3.fromRGB(0, 255, 255)
+msg.Font = Enum.Font.GothamBlack
+msg.TextScaled = true
+msg.TextStrokeTransparency = 0
+msg.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+msg.TextTransparency = 1
+
+-- hiệu ứng pháo hoa nho nhỏ
+local function createFirework()
+    local part = Instance.new("Part")
+    part.Anchored = true
+    part.CanCollide = false
+    part.Size = Vector3.new(0.5,0.5,0.5)
+    part.Position = player.Character.HumanoidRootPart.Position + Vector3.new(math.random(-10,10), math.random(5,15), math.random(-10,10))
+    part.Transparency = 1
+    part.Parent = workspace
+
+    local firework = Instance.new("ParticleEmitter", part)
+    firework.Texture = "rbxassetid://243660364" -- sparkle
+    firework.Rate = 50
+    firework.Lifetime = NumberRange.new(1)
+    firework.Speed = NumberRange.new(10)
+    firework.SpreadAngle = Vector2.new(360,360)
+    firework.Color = ColorSequence.new(Color3.fromRGB(math.random(100,255), math.random(100,255), math.random(100,255)))
+    
+    game.Debris:AddItem(part,2)
+end
+
+-- 1. Hiện chữ
+local appear = TweenService:Create(msg, TweenInfo.new(1.5, Enum.EasingStyle.Quad), {
+    TextTransparency = 0
+})
+appear:Play()
+appear.Completed:Wait()
+
+-- 2. Đổi màu + pháo hoa trong 5 giây
+local startTime = tick()
+while tick() - startTime < 5 do
+    msg.TextColor3 = Color3.fromRGB(
+        math.random(0, 255),
+        math.random(180, 255),
+        math.random(200, 255)
+    )
+    createFirework()
+    task.wait(0.5)
+end
+
+-- 3. Biến mất
+local vanish = TweenService:Create(msg, TweenInfo.new(2, Enum.EasingStyle.Sine), {
+    TextTransparency = 1
+})
+vanish:Play()
+vanish.Completed:Wait()
+
+gui:Destroy()
+
+--// Sau Intro thì load UI chính
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
@@ -23,7 +98,7 @@ end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 repeat wait() until game:IsLoaded()
 local Window = Fluent:CreateWindow({
-    Title = "VTD Roblox Tổng Hợp true 2.35.7",
+    Title = "VTD Roblox Tổng Hợp true 2.4.0",
     SubTitle = "Blox Fruit",
     TabWidth = 157,
     Size = UDim2.fromOffset(450, 300),
@@ -168,3 +243,5 @@ Tabs.Main1:AddButton({
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() 
   end
 })
+
+-- ... (các Tab + Button giữ nguyên như bạn viết)
