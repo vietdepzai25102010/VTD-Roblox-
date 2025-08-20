@@ -155,7 +155,7 @@ Tabs.Main2:AddButton({
   end
 })
 Tabs.Main2:AddButton({
-    Title="script no lag",
+    Title="script taro",
     Description="",
     Callback=function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/GrowaGarden"))()
