@@ -369,7 +369,7 @@ Tabs.Main4:AddButton({Title="Ink Game Full Hub", Callback=function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/InkHubDev/InkHub/main/InkFullHub.lua"))()
 end})
 Tabs.Main1:AddButton({
-    Title="Overgust Hub VN",
+    Title="astral Hub VN",
     Description="Bản mới nhất Tiếng Việt ✅",
     Callback=function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html"))()
