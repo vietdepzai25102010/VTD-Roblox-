@@ -383,3 +383,10 @@ Tabs.Main1:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinXt2Vn"))()
     end
 })
+Tabs.Main1:AddButton({
+    Title="BlueX Hub",
+    Description="Blox Fruit Hub ✅",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
+    end
+})
